@@ -160,6 +160,10 @@ body {
   vertical-align: bottom;
 }
 
+.body-content #pdf_file {
+  margin: 25px 25px 25px 25px;
+}
+
 .bc-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -177,10 +181,6 @@ body {
 .body-content h1 {
   text-align: center;
   border-bottom: 1px solid #222;
-}
-
-.body-content #pdf_file {
-  margin: 25px;
 }
 
 .card-interface img {
@@ -287,8 +287,10 @@ i.fa.fa-facebook {
   color: inherit;
 }
 
+
 /*Media Queries*/
 @media screen and (max-width: 768px) {
+  /*Tablet/iPad*/
   .header-top img {
     margin-left: 200px;
   }
@@ -383,5 +385,314 @@ i.fa.fa-facebook {
   .footer-right h1 {
     margin: 0px 50px 0px 115px;
     padding: 10px 0px 10px 25px;
+  }
+}
+
+/*iPhone 3/4/4s (320x480)*/
+@media screen and (max-width: 320px) {
+  .header-top img {
+    margin-left: 78px;
+  }
+
+  .nav-menu ul {
+    margin: 0px 5px 0px 5px;
+    padding: 0px 5px 0px 5px;
+  }
+
+  .nav-menu img {
+    padding-left: 145px;
+    padding-right: 135px;
+  }
+
+  .nav-menu ul li {
+    float: none;
+    display: block;
+  }
+
+  .nav-menu ul li a {
+    width: 100%;
+    font-size: 13px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #fb998c;
+  }
+
+  .nav-menu ul li.last > a,
+  .nav-menu ul li:last-child > a {
+    border: 0;
+  }
+
+  .nav-menu ul li a:after {
+    display: none;
+  }
+
+  .nav-menu ul li a:before {
+    display: none;
+  }
+
+  .container {
+    margin: 10px 5px 10px 5px;
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .body-content {
+    margin: 20px 10px 20px 10px;
+    width: auto;
+    height: auto;
+  }
+
+  .body-content h1 {
+    font-size: 20px;
+  }
+
+  .body-content img {
+    width: 97%;
+  }
+
+  .body-content p {
+    margin: 8px 5px 8px 5px;
+    font-size: 18px;
+  }
+
+  .body-content h2 {
+    margin: 10px 5px 3px 5px;
+    font-size: 24px;
+  }
+
+  .body-content ul li {
+    margin: 0px 5px 5px 5px;
+    padding: 0px 5px 5px 5px;
+    font-size: 17px;
+  }
+
+  .body-content #pdf_image {
+    max-width: 7%;
+  }
+
+  .body-content #pdf_file {
+    margin: 5px 5px 5px 5px;
+  }
+
+  .card {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 2px 0px 2px;
+    width: 300px;
+  }
+
+  .card-interface {
+    margin: 10px 4px 10px 4px;
+    width: 300px;
+    height: auto;
+  }
+
+  .card-interface > .information_text {
+    width: auto;
+    font-size: 15px;
+  }
+
+  .card-interface:hover {
+    transform: scale(1.05);
+  }
+
+  .information_text h1 {
+    font-size: 20px;
+  }
+
+  .information_text button {
+    margin: 0px 0px 15px 0px;
+  }
+
+  footer {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    max-width: 320px;
+  }
+
+  .footer-center {
+    border-right: 0px solid #222;
+    border-left: 0px solid #222;
+  }
+
+  .footer-center,
+  .footer.right {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+  }
+
+  .footer-center h1,
+  .footer-right h1 {
+    margin: auto;
+    padding: auto;
+    width: auto;
+  }
+
+  .footer-center p,
+  .footer-right p {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    width: auto;
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .header-top img {
+    margin-left: 100px;
+  }
+
+  .nav-menu ul {
+    margin: 0px 5px 0px 5px;
+    padding: 0px 5px 0px 5px;
+  }
+
+  .nav-menu img {
+    padding-left: 145px;
+    padding-right: 135px;
+  }
+
+  .nav-menu ul li {
+    float: none;
+    display: block;
+  }
+
+  .nav-menu ul li a {
+    width: 100%;
+    font-size: 13px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #fb998c;
+  }
+
+  .nav-menu ul li.last > a,
+  .nav-menu ul li:last-child > a {
+    border: 0;
+  }
+
+  .nav-menu ul li a:after {
+    display: none;
+  }
+
+  .nav-menu ul li a:before {
+    display: none;
+  }
+
+  .container {
+    margin: 10px 5px 10px 5px;
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .body-content {
+    margin: 20px 10px 20px 10px;
+    width: auto;
+    height: auto;
+  }
+
+  .body-content h1 {
+    font-size: 20px;
+  }
+
+  .body-content img {
+    width: 97%;
+  }
+
+  .body-content p {
+    margin: 8px 5px 8px 5px;
+    font-size: 18px;
+  }
+
+  .body-content h2 {
+    margin: 10px 5px 3px 5px;
+    font-size: 24px;
+  }
+
+  .body-content ul li {
+    margin: 0px 5px 5px 5px;
+    padding: 0px 5px 5px 5px;
+    font-size: 17px;
+  }
+
+  .body-content #pdf_image {
+    max-width: 7%;
+  }
+
+  .body-content #pdf_file {
+    margin: 5px 5px 5px 5px;
+  }
+
+  .card {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 2px 0px 2px;
+    width: 300px;
+  }
+
+  .card-interface {
+    margin: 10px 4px 10px 4px;
+    width: 300px;
+    height: auto;
+  }
+
+  .card-interface > .information_text {
+    width: auto;
+    font-size: 15px;
+  }
+
+  .card-interface:hover {
+    transform: scale(1.05);
+  }
+
+  .information_text h1 {
+    font-size: 20px;
+  }
+
+  .information_text button {
+    margin: 0px 0px 15px 0px;
+  }
+
+  footer {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    max-width: auto;
+  }
+
+  .footer-center {
+    border-right: 0px solid #222;
+    border-left: 0px solid #222;
+  }
+
+  .footer-center,
+  .footer.right {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+  }
+
+  .footer-center h1,
+  .footer-right h1 {
+    margin: 0px 0px 0px 0px;
+    padding: 10px 0px 10px 0px;
+    width: auto;
+  }
+
+  .footer-center p,
+  .footer-right p {
+    margin: auto;
+    padding: auto;
+    width: auto;
+    font-size: 13px;
   }
 }
