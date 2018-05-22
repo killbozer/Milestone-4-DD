@@ -18,7 +18,7 @@ header {
 }
 
 .header-top img {
-  margin: 10px 30px;
+  margin: 10px 135px;
   padding: 5px;
 }
 
@@ -185,7 +185,8 @@ body {
 
 .card-interface img {
   width: 100%;
-  border-radius: 4px;
+  /*Top Left / Top Right / Bottom Right / Bottom Left*/
+  border-radius: 4px 4px 0px 0px;
 }
 
 .card-interface h1 {
@@ -252,7 +253,7 @@ footer {
 .footer-center p,
 .footer-right p {
   width: 400px;
-  margin: 0px 50px 0px 50px;
+  margin: 0px 50px 0px 85px;
   padding: 0px 25px 0px 25px;
   font-size: 17px;
   font-family: "Arial";
@@ -289,69 +290,78 @@ i.fa.fa-facebook {
 
 
 /*Media Queries*/
-@media screen and (max-width: 768px) {
-  /*Tablet/iPad*/
-  .header-top img {
-    margin-left: 200px;
-  }
-
+/*------------------------------------------
+  Responsive Grid Media Queries - 1280, 1024, 768, 480
+   1280-1024   - desktop (default grid)
+   1024-768    - tablet landscape
+   768-480     - tablet
+   480-less    - phone landscape & smaller
+--------------------------------------------*/
+@media screen and (max-width: 1440px) {
   .nav-menu ul {
-    margin: 0px 25px 0px 25px;
-    padding: 0px 45px 0px 45px;
-  }
-
-  .nav-menu img {
-    padding-left: 145px;
-    padding-right: 135px;
-  }
-
-  .nav-menu ul li {
-    float: none;
-    display: block;
+    margin: 5px 10px 0px 10px;
+    padding: 5px 10px 0px 10px;
   }
 
   .nav-menu ul li a {
-    width: 100%;
-    box-sizing: border-box;
-    border-bottom: 1px solid #fb998c;
-  }
-
-  .nav-menu ul li.last > a,
-  .nav-menu ul li:last-child > a {
-    border: 0;
-  }
-
-  .nav-menu ul li a:after {
-    display: none;
-  }
-
-  .nav-menu ul li a:before {
-    display: none;
+    font-size: 13px;
+    text-transform: none;
   }
 
   .container {
-    margin: 20px 25px 20px 25px;
+    margin: 10px 5px 10px 5px;
     width: auto;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   .body-content {
-    width: 525px;
+    margin: 50px 135px 50px 135px;
+    width: auto;
     height: auto;
   }
 
+  .body-content h1 {
+    font-size: 20px;
+  }
+
   .body-content img {
-    width: 98%;
+    width: 99%;
+  }
+
+  .body-content p {
+    margin: 8px 5px 8px 5px;
+    font-size: 18px;
+  }
+
+  .body-content h2 {
+    margin: 10px 5px 3px 5px;
+    font-size: 24px;
+  }
+
+  .body-content ul li {
+    margin: 0px 5px 5px 5px;
+    padding: 0px 5px 5px 5px;
+    font-size: 17px;
+  }
+
+  .body-content #pdf_image {
+    max-width: 3%;
+  }
+
+  .body-content #pdf_file {
+    margin: 5px 5px 5px 5px;
   }
 
   .card {
-    padding-left: 35px;
-    padding-right: 35px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 2px 0px 2px;
+    width: auto;
   }
 
   .card-interface {
-    width: 400px;
+    margin: 10px 4px 10px 4px;
+    width: auto;
     height: auto;
   }
 
@@ -360,37 +370,51 @@ i.fa.fa-facebook {
     font-size: 15px;
   }
 
-  .information_text button {
-    margin: 0px 0px 15px 0px;
+  .card-interface:hover {
+    transform: scale(1.05);
   }
 
-  footer {
-    width: auto;
-    display: grid;
-    grid-template-columns: 1fr;
+  .information_text h1 {
+    font-size: 20px;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    max-width: 1024px;
   }
 
   .footer-center {
-    border-right: 0px solid #222;
-    border-left: 0px solid #222;
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
   }
 
   .footer-center,
   .footer.right {
-    margin: 0px;
-    padding: 0px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
   }
 
   .footer-center h1,
   .footer-right h1 {
-    margin: 0px 50px 0px 115px;
-    padding: 10px 0px 10px 25px;
+    margin: auto;
+    padding: auto;
+    width: auto;
+  }
+
+  .footer-center p,
+  .footer-right p {
+    margin: 0px 50px 0px 50px;
+    padding: 0px 10px 0px 10px;
+    width: auto;
+    font-size: 13px;
   }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 1024px) {
   .header-top img {
-    margin-left: 100px;
+    margin-left: 430px;
+    margin-right: auto;
   }
 
   .nav-menu ul {
@@ -432,7 +456,7 @@ i.fa.fa-facebook {
     margin: 10px 5px 10px 5px;
     width: auto;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .body-content {
@@ -446,7 +470,7 @@ i.fa.fa-facebook {
   }
 
   .body-content img {
-    width: 97%;
+    width: 99%;
   }
 
   .body-content p {
@@ -466,7 +490,7 @@ i.fa.fa-facebook {
   }
 
   .body-content #pdf_image {
-    max-width: 7%;
+    max-width: 3%;
   }
 
   .body-content #pdf_file {
@@ -476,12 +500,12 @@ i.fa.fa-facebook {
   .card {
     margin: 0px 0px 0px 0px;
     padding: 0px 2px 0px 2px;
-    width: 300px;
+    width: auto;
   }
 
   .card-interface {
     margin: 10px 4px 10px 4px;
-    width: 300px;
+    width: auto;
     height: auto;
   }
 
@@ -498,21 +522,17 @@ i.fa.fa-facebook {
     font-size: 20px;
   }
 
-  .information_text button {
-    margin: 0px 0px 15px 0px;
-  }
-
   footer {
     width: 100%;
     height: auto;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 10fr 10fr;
   }
 
   .footer-left,
   .footer-center,
   .footer-right {
-    max-width: auto;
+    max-width: 1024px;
   }
 
   .footer-center {
@@ -528,24 +548,477 @@ i.fa.fa-facebook {
 
   .footer-center h1,
   .footer-right h1 {
-    margin: 0px 0px 0px 0px;
-    padding: 10px 0px 10px 0px;
+    margin: auto;
+    padding: auto;
     width: auto;
   }
 
   .footer-center p,
   .footer-right p {
-    margin: auto;
-    padding: auto;
+    margin: 0px 50px 0px 50px;
+    padding: 0px 10px 0px 10px;
     width: auto;
     font-size: 13px;
   }
 }
 
-/*iPhone 3/4/4s (320x480)*/
+@media screen and (max-width: 768px) {
+  .header-top img {
+    margin-left: 290px;
+    margin-right: auto;
+  }
+
+  .nav-menu ul {
+    margin: 0px 5px 0px 5px;
+    padding: 0px 5px 0px 5px;
+  }
+
+  .nav-menu img {
+    padding-left: 145px;
+    padding-right: 135px;
+  }
+
+  .nav-menu ul li {
+    float: none;
+    display: block;
+  }
+
+  .nav-menu ul li a {
+    width: 100%;
+    font-size: 13px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #fb998c;
+  }
+
+  .nav-menu ul li.last > a,
+  .nav-menu ul li:last-child > a {
+    border: 0;
+  }
+
+  .nav-menu ul li a:after {
+    display: none;
+  }
+
+  .nav-menu ul li a:before {
+    display: none;
+  }
+
+  .container {
+    margin: 10px 5px 10px 5px;
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .body-content {
+    margin: 20px 10px 20px 10px;
+    width: auto;
+    height: auto;
+  }
+
+  .body-content h1 {
+    font-size: 20px;
+  }
+
+  .body-content img {
+    width: 98.5%;
+  }
+
+  .body-content p {
+    margin: 8px 5px 8px 5px;
+    font-size: 18px;
+  }
+
+  .body-content h2 {
+    margin: 10px 5px 3px 5px;
+    font-size: 24px;
+  }
+
+  .body-content ul li {
+    margin: 0px 5px 5px 5px;
+    padding: 0px 5px 5px 5px;
+    font-size: 17px;
+  }
+
+  .body-content #pdf_image {
+    max-width: 3%;
+  }
+
+  .body-content #pdf_file {
+    margin: 5px 5px 5px 5px;
+  }
+
+  .card {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 2px 0px 2px;
+    width: auto;
+  }
+
+  .card-interface {
+    margin: 10px 4px 10px 4px;
+    width: auto;
+    height: auto;
+  }
+
+  .card-interface > .information_text {
+    width: auto;
+    font-size: 15px;
+  }
+
+  .card-interface:hover {
+    transform: scale(1.05);
+  }
+
+  .information_text h1 {
+    font-size: 20px;
+  }
+
+  footer {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 10fr 10fr;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    max-width: 768px;
+  }
+
+  .footer-center {
+    border-right: 0px solid #222;
+    border-left: 0px solid #222;
+  }
+
+  .footer-center,
+  .footer.right {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+  }
+
+  .footer-center h1,
+  .footer-right h1 {
+    margin: auto;
+    padding: auto;
+    width: auto;
+  }
+
+  .footer-center p,
+  .footer-right p {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    width: auto;
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .header-top img {
+    margin-left: 130px;
+    margin-right: auto;
+  }
+
+  .nav-menu ul {
+    margin: 0px 5px 0px 5px;
+    padding: 0px 5px 0px 5px;
+  }
+
+  .nav-menu img {
+    padding-left: 145px;
+    padding-right: 135px;
+  }
+
+  .nav-menu ul li {
+    float: none;
+    display: block;
+  }
+
+  .nav-menu ul li a {
+    width: 100%;
+    font-size: 13px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #fb998c;
+  }
+
+  .nav-menu ul li.last > a,
+  .nav-menu ul li:last-child > a {
+    border: 0;
+  }
+
+  .nav-menu ul li a:after {
+    display: none;
+  }
+
+  .nav-menu ul li a:before {
+    display: none;
+  }
+
+  .container {
+    margin: 10px 5px 10px 5px;
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .body-content {
+    margin: 20px 10px 20px 10px;
+    width: auto;
+    height: auto;
+  }
+
+  .body-content h1 {
+    font-size: 20px;
+  }
+
+  .body-content img {
+    width: 97%;
+  }
+
+  .body-content p {
+    margin: 8px 5px 8px 5px;
+    font-size: 18px;
+  }
+
+  .body-content h2 {
+    margin: 10px 5px 3px 5px;
+    font-size: 24px;
+  }
+
+  .body-content ul li {
+    margin: 0px 5px 5px 5px;
+    padding: 0px 5px 5px 5px;
+    font-size: 17px;
+  }
+
+  .body-content #pdf_image {
+    max-width: 5%;
+  }
+
+  .body-content #pdf_file {
+    margin: 5px 5px 5px 5px;
+  }
+
+  .card {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 2px 0px 2px;
+    width: auto;
+  }
+
+  .card-interface {
+    margin: 10px 4px 10px 4px;
+    width: auto;
+    height: auto;
+  }
+
+  .card-interface > .information_text {
+    width: auto;
+    font-size: 15px;
+  }
+
+  .card-interface:hover {
+    transform: scale(1.05);
+  }
+
+  .information_text h1 {
+    font-size: 20px;
+  }
+
+  footer {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    max-width: 425px;
+  }
+
+  .footer-center {
+    border-right: 0px solid #222;
+    border-left: 0px solid #222;
+  }
+
+  .footer-center,
+  .footer.right {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+  }
+
+  .footer-center h1,
+  .footer-right h1 {
+    margin: auto;
+    padding: auto;
+    width: auto;
+  }
+
+  .footer-center p,
+  .footer-right p {
+    margin: 0px 50px 0px 50px;
+    padding: 0px 0px 0px 0px;
+    width: auto;
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .header-top img {
+    margin-left: 105px;
+    margin-right: auto;
+  }
+
+  .nav-menu ul {
+    margin: 0px 5px 0px 5px;
+    padding: 0px 5px 0px 5px;
+  }
+
+  .nav-menu img {
+    padding-left: 145px;
+    padding-right: 135px;
+  }
+
+  .nav-menu ul li {
+    float: none;
+    display: block;
+  }
+
+  .nav-menu ul li a {
+    width: 100%;
+    font-size: 13px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #fb998c;
+  }
+
+  .nav-menu ul li.last > a,
+  .nav-menu ul li:last-child > a {
+    border: 0;
+  }
+
+  .nav-menu ul li a:after {
+    display: none;
+  }
+
+  .nav-menu ul li a:before {
+    display: none;
+  }
+
+  .container {
+    margin: 10px 5px 10px 5px;
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .body-content {
+    margin: 20px 10px 20px 10px;
+    width: auto;
+    height: auto;
+  }
+
+  .body-content h1 {
+    font-size: 20px;
+  }
+
+  .body-content img {
+    width: 97%;
+  }
+
+  .body-content p {
+    margin: 8px 5px 8px 5px;
+    font-size: 18px;
+  }
+
+  .body-content h2 {
+    margin: 10px 5px 3px 5px;
+    font-size: 24px;
+  }
+
+  .body-content ul li {
+    margin: 0px 5px 5px 5px;
+    padding: 0px 5px 5px 5px;
+    font-size: 17px;
+  }
+
+  .body-content #pdf_image {
+    max-width: 7%;
+  }
+
+  .body-content #pdf_file {
+    margin: 5px 5px 5px 5px;
+  }
+
+  .card {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 2px 0px 2px;
+    width: auto;
+  }
+
+  .card-interface {
+    margin: 10px 4px 10px 4px;
+    width: auto;
+    height: auto;
+  }
+
+  .card-interface > .information_text {
+    width: auto;
+    font-size: 15px;
+  }
+
+  .card-interface:hover {
+    transform: scale(1.05);
+  }
+
+  .information_text h1 {
+    font-size: 20px;
+  }
+
+  footer {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    max-width: 375px;
+  }
+
+  .footer-center {
+    border-right: 0px solid #222;
+    border-left: 0px solid #222;
+  }
+
+  .footer-center,
+  .footer.right {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+  }
+
+  .footer-center h1,
+  .footer-right h1 {
+    margin: auto;
+    padding: auto;
+    width: auto;
+  }
+
+  .footer-center p,
+  .footer-right p {
+    margin: 0px 30px 0px 30px;
+    padding: 0px 0px 0px 0px;
+    width: auto;
+    font-size: 13px;
+  }
+}
+
 @media screen and (max-width: 320px) {
   .header-top img {
     margin-left: 78px;
+    margin-right: auto;
   }
 
   .nav-menu ul {
@@ -636,7 +1109,7 @@ i.fa.fa-facebook {
 
   .card-interface {
     margin: 10px 4px 10px 4px;
-    width: 300px;
+    width: auto;
     height: auto;
   }
 
@@ -651,10 +1124,6 @@ i.fa.fa-facebook {
 
   .information_text h1 {
     font-size: 20px;
-  }
-
-  .information_text button {
-    margin: 0px 0px 15px 0px;
   }
 
   footer {
@@ -696,4 +1165,3 @@ i.fa.fa-facebook {
     font-size: 13px;
   }
 }
-
